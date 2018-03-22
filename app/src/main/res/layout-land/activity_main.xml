@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_land"
+    tools:context="com.example.a52641.animal_game.MainActivity">
+
+
+    <Button
+        android:id="@+id/bt_play"
+        android:layout_width="205dp"
+        android:layout_height="53dp"
+        android:layout_alignBottom="@+id/bt_settings"
+        android:layout_alignLeft="@+id/bt_settings"
+        android:layout_alignStart="@+id/bt_settings"
+        android:layout_marginBottom="69dp"
+        android:textSize="35sp"
+        android:textColor="#1C86EE"
+        android:background="#FFFFFF"
+        android:text="PLAY"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <Button
+        android:id="@+id/bt_settings"
+        android:layout_width="204dp"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:textSize="35sp"
+        android:textColor="#1C86EE"
+        android:background="#FFFFFF"
+        android:text="SETTINGS"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="399dp" />
+
+</RelativeLayout>

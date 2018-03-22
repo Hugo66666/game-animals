@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue"
+    tools:context="com.example.a52641.animal_game.Playing">
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="334dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/pic_1"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_below="@+id/score"
+        android:layout_marginTop="43dp"
+        android:layout_toEndOf="@+id/score"
+        android:layout_toRightOf="@+id/score" />
+
+    <ImageButton
+        android:id="@+id/pic_2"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_alignTop="@+id/pic_1"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/pic_1"
+        android:layout_toRightOf="@+id/pic_1" />
+
+    <ImageButton
+        android:id="@+id/pic_3"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_alignLeft="@+id/pic_1"
+        android:layout_alignStart="@+id/pic_1"
+        android:layout_below="@+id/pic_1"
+        android:layout_marginTop="38dp" />
+
+    <ImageButton
+        android:id="@+id/pic_4"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_alignLeft="@+id/pic_2"
+        android:layout_alignStart="@+id/pic_2"
+        android:layout_alignTop="@+id/pic_3" />
+
+    <TextView
+        android:id="@+id/animal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pic_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:text="NAME"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/heart_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pic_1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="heart:3"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="35sp"/>
+</RelativeLayout>
