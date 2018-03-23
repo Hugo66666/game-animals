@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Playing" />
         <activity android:name=".DeadActivity" />
-        <activity android:name=".WinActivity"></activity>
+        <activity android:name=".WinActivity" />
+        <activity android:name=".Setting"></activity>
     </application>
 
 </manifest>

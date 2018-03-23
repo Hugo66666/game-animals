@@ -37,11 +37,17 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
     int count = 0;         //记录第几个随机数
     int score_count = 0;     //记录得分
     int heart_count = 3;    //记录生命值
+    int goal_number=20;
+    int heart_number=3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing);
+        Intent intent = getIntent();
+        goal_number = intent.getIntExtra("goal_number",20);
+        heart_number = intent.getIntExtra("heart_number",3);
+        heart_count = heart_number;
 
 
         Play_game();
@@ -61,9 +67,9 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
             case R.id.pic_1:
                 if(right_num==0)    //答对
                 {
-                    playSound(R.raw.right);
                     score_count++;
-                    if(score_count<=20) {
+                    if(score_count<goal_number) {
+                        playSound(R.raw.right);
                         result.setText("Right!");
                         result.setTextColor((Color.parseColor("#7CFC00")));
                         Play_game();
@@ -71,21 +77,26 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
                     else
                     {
                         Intent intent = new Intent(Playing.this, WinActivity.class);
+                        intent.putExtra("goal_number",goal_number);
+                        intent.putExtra("heart_number",heart_number);
                         startActivity(intent);
                         Playing.this.finish();
                     }
                 }
                     else        //答错
                 {
-                    playSound(R.raw.wrong);
                     result.setText("Wrong!");
                     result.setTextColor((Color.parseColor("#EE0000")));
                     heart_count--;
-                    if(heart_count>0)
-                    Play_game();
+                    if(heart_count>0) {
+                        playSound(R.raw.wrong);
+                        Play_game();
+                    }
                     else
                     {
                         Intent intent = new Intent(Playing.this, DeadActivity.class);
+                        intent.putExtra("goal_number",goal_number);
+                        intent.putExtra("heart_number",heart_number);
                         startActivity(intent);
                         Playing.this.finish();
                     }
@@ -94,9 +105,9 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
             case R.id.pic_2:
                 if(right_num==1)    //答对
                 {
-                    playSound(R.raw.right);
                     score_count++;
-                    if(score_count<=20) {
+                    if(score_count<goal_number) {
+                        playSound(R.raw.right);
                         result.setText("Right!");
                         result.setTextColor((Color.parseColor("#7CFC00")));
                         Play_game();
@@ -104,21 +115,26 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
                     else
                     {
                         Intent intent = new Intent(Playing.this, WinActivity.class);
+                        intent.putExtra("goal_number",goal_number);
+                        intent.putExtra("heart_number",heart_number);
                         startActivity(intent);
                         Playing.this.finish();
                     }
                 }
                 else       //答错
                 {
-                    playSound(R.raw.wrong);
                     result.setText("Wrong!");
                     result.setTextColor((Color.parseColor("#EE0000")));
                     heart_count--;
-                    if(heart_count>0)
+                    if(heart_count>0) {
+                        playSound(R.raw.wrong);
                         Play_game();
+                    }
                     else
                     {
                         Intent intent = new Intent(Playing.this, DeadActivity.class);
+                        intent.putExtra("goal_number",goal_number);
+                        intent.putExtra("heart_number",heart_number);
                         startActivity(intent);
                         Playing.this.finish();
                     }
@@ -127,9 +143,9 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
             case R.id.pic_3:
                 if(right_num==2)    //答对
                 {
-                    playSound(R.raw.right);
                     score_count++;
-                    if(score_count<=20) {
+                    if(score_count<goal_number) {
+                        playSound(R.raw.right);
                         result.setText("Right!");
                         result.setTextColor((Color.parseColor("#7CFC00")));
                         Play_game();
@@ -137,21 +153,26 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
                     else
                     {
                         Intent intent = new Intent(Playing.this, WinActivity.class);
+                        intent.putExtra("goal_number",goal_number);
+                        intent.putExtra("heart_number",heart_number);
                         startActivity(intent);
                         Playing.this.finish();
                     }
                 }
                 else        //答错
                 {
-                    playSound(R.raw.wrong);
                     result.setText("Wrong!");
                     result.setTextColor((Color.parseColor("#EE0000")));
                     heart_count--;
-                    if(heart_count>0)
+                    if(heart_count>0) {
+                        playSound(R.raw.wrong);
                         Play_game();
+                    }
                     else
                     {
                         Intent intent = new Intent(Playing.this, DeadActivity.class);
+                        intent.putExtra("goal_number",goal_number);
+                        intent.putExtra("heart_number",heart_number);
                         startActivity(intent);
                         Playing.this.finish();
                     }
@@ -160,9 +181,9 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
             case R.id.pic_4:
                 if(right_num==3)    //答对
                 {
-                    playSound(R.raw.right);
                     score_count++;
-                    if(score_count<=20) {
+                    if(score_count<goal_number) {
+                        playSound(R.raw.right);
                         result.setText("Right!");
                         result.setTextColor((Color.parseColor("#7CFC00")));
                         Play_game();
@@ -170,21 +191,26 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
                     else
                     {
                         Intent intent = new Intent(Playing.this, WinActivity.class);
+                        intent.putExtra("goal_number",goal_number);
+                        intent.putExtra("heart_number",heart_number);
                         startActivity(intent);
                         Playing.this.finish();
                     }
                 }
                 else       //答错
                 {
-                    playSound(R.raw.wrong);
                     result.setText("Wrong!");
                     result.setTextColor((Color.parseColor("#EE0000")));
                     heart_count--;
-                    if(heart_count>0)
+                    if(heart_count>0) {
+                        playSound(R.raw.wrong);
                         Play_game();
+                    }
                     else
                     {
                         Intent intent = new Intent(Playing.this, DeadActivity.class);
+                        intent.putExtra("goal_number",goal_number);
+                        intent.putExtra("heart_number",heart_number);
                         startActivity(intent);
                         Playing.this.finish();
                     }
