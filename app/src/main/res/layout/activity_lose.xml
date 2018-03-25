@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue"
+    tools:context="mg.studio.game.animals.Lose">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:text="You failed！"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="81dp"
+        android:fontFamily="@font/font_one" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="You got 0 points!"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"/>
+
+    <Button
+        android:id="@+id/return_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp"
+        android:background="#FFFFFF"
+        android:text="Try Again!"
+        android:textColor="@drawable/text_selector"
+        android:textSize="35dp" />
+
+
+</RelativeLayout>

@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/game-animals.iml" filepath="$PROJECT_DIR$/game-animals.iml" />
+      <module fileurl="file://C:\Users\52641\Desktop\game-animals-huixiaoyang\game-animals.iml" filepath="C:\Users\52641\Desktop\game-animals-huixiaoyang\game-animals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/game-animals-huixiaoyang.iml" filepath="$PROJECT_DIR$/game-animals-huixiaoyang.iml" />
     </modules>
   </component>
 </project>
